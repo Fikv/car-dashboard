@@ -1,5 +1,6 @@
 
 import Drawer from './(components)/Drawer'
+import Navbar from './(components)/Navbar'
 import './globals.css'
 
 export default function RootLayout({
@@ -9,7 +10,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{<Drawer>{children}</Drawer>}</body>
+      <body>
+        <Navbar/>
+        {children}
+      </body>
     </html>
   )
 }

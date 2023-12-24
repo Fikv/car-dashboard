@@ -1,21 +1,11 @@
 'use client'
-import { createCarLog } from "@/lib/DumyDataGenerator";
 import CarShema from "@/model/car";
 import React from "react";
-import {io} from "socket.io-client"
 
 interface Props {
-  title:string
   logs:CarShema[]
 }
 const Dashboard: React.FC<Props> = (props) => {
-
-  const addCarchandler = ()=>{
-      const car:CarShema = createCarLog();
-      const socket  = io("http://35.185.80.147:4000");
-      socket.emit("addCarLog",car);
-  }
-
   return (
     <div className="container">
     <div className="overflow-x-auto">
