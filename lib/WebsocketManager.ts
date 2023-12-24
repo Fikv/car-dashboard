@@ -14,10 +14,6 @@ export default function getWebsocket(){
           console.log('Connected to server!');
         });
         
-    webSocket.on('newLog', (data:any) => {
-            console.log('Received data:', data);
-    });
-        
     webSocket.on('disconnect', () => {
           console.log('Disconnected from server!');
       });

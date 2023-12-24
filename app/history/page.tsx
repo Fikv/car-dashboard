@@ -9,11 +9,11 @@ export default function Home() {
   const[cars,setCars] = useState<CarShema[]>([])
   useEffect(()=>{
     const socket = getWebsocket();
-    socket.emit("getAllCars",(response)=>{
+    socket.emit("getAllCars",(response:any)=>{
       setCars(response.cars);  
     });
   },[])
 
-    return <Dashboard title="History" logs={cars}/>
+    return <Dashboard logs={cars}/>
   }
   
