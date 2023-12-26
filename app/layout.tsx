@@ -1,5 +1,3 @@
-
-import Drawer from './(components)/Drawer'
 import Navbar from './(components)/Navbar'
 import './globals.css'
 
