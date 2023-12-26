@@ -16,7 +16,7 @@ const CarDetails: React.FC<Props> = (props) => {
         <Gauge title="Motor Left">
             <GaugeChart id="motor-left" 
             nrOfLevels={30}
-            formatTextValue={(value: number) => ((value-50)*2).toFixed()+'%'}
+            formatTextValue={(value: string) => ((parseInt(value)-50)*2).toFixed()+'%'}
             percent={(props.data.motorLeft+100)/200}
             animate={false} 
             />
@@ -33,7 +33,7 @@ const CarDetails: React.FC<Props> = (props) => {
         <Gauge title="Motor Right">
             <GaugeChart id="motor-left" 
             nrOfLevels={30}
-            formatTextValue={(value: number) => ((value-50)*2).toFixed()+'%'}
+            formatTextValue={(value: string) => ((parseInt(value)-50)*2).toFixed()+'%'}
             percent={(props.data.motorRight+100)/200} 
             animate={false}
             />
