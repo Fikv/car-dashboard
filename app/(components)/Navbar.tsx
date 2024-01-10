@@ -11,8 +11,8 @@ const Navbar: React.FC = () => {
 
     const addCar= ()=>{
         const car:CarShema = createCarLog();
-        const socket  = io("http://35.185.80.147:4000");
-        socket.emit("addCarLog",car);
+        const socket  = io("http://35.185.80.147:4000");    
+        socket.emit("addCarLog",JSON.stringify(car));
     }
 
     return <div className="navbar bg-base-100">
