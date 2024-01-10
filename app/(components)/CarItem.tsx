@@ -18,7 +18,7 @@ const CarItem: React.FC<Props> = (props) => {
                 height={100}
                 alt="Car"
             />
-            <input type="radio" name="cars" className="hidden" checked />
+            <input type="radio" name="cars" className="hidden" checked  readOnly/>
         </label>
         <h3 className=" text-center">{props.id}</h3>
         </div>);
